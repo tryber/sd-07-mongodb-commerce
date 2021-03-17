@@ -1,15 +1,7 @@
-db.produtos.updateMany(
+db.produtos.countDocuments(
   {
-    valoresNutricionais: {
-      $elemMatch: {
-        tipo: "sódio", percentual: { $gt: 20, $lte: 40 },
-      },
+    nome: {
+      $regex: /\w*mc\w*/i,
     },
   },
-  { $push: { tags: "contém sódio" } },
-);
-
-db.produtos.find(
-  {},
-  { _id: 0, nome: 1, tags: 1 },
 );
