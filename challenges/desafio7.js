@@ -1,11 +1,11 @@
 db.produtos.updateMany(
   {},
   {
-    $pull: { ingredientes: { $regex: /\s?cebola.?\s?/ig } }
+    $pull: { ingredientes: "cebola" },
   },
 );
 
 db.produtos.find(
-  { ingredientes: { $regex: /\s?cebola.?\s?/ig } },
-  { _id: 0, nome: 1, ingredientes: 1 }
+  {},
+  { _id: 0, nome: 1, ingredientes: 1 },
 );
