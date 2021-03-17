@@ -23,7 +23,7 @@ db.produtos.updateMany(
 
 db.produtos.updateMany(
   { tags: { $all: ["bovino", "pao"] } },
-  { $inc: { "vendasPorDia.5": 120 } },
+  { $inc: { "vendasPorDia.6": 120 } },
 );
 
 db.produtos.find(
