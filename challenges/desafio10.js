@@ -10,7 +10,7 @@
 // Crie uma query que retorne o nome e vendasPorDia de todos os documentos.
 db.produtos.updateMany(
   { },
-  { $set: {
+  { $addToSet: {
     vendasPorDia: [0, 0, 0, 0, 0, 0, 0],
   },
   },
@@ -23,7 +23,7 @@ db.produtos.updateMany(
 );
 
 db.produtos.updateMany(
-  { tags: { $all: ["bovino", "pao"] } },
+  { tags: { $all: ["bovino", "pão"] } },
   { $inc: { "vendasPorDia.6": 120 } },
 );
 

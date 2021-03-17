@@ -3,7 +3,7 @@
 // Crie uma query que retorne o nome e valorUnitario de todos os produtos.
 db.produtos.updateMany(
   { valorUnitario: { $exists: false } },
-  { $addToSet: {
+  { $set: {
     valorUnitario: NumberDecimal("0.00"),
   },
   },
