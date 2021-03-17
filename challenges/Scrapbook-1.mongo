@@ -215,3 +215,8 @@ db.produtos.count(
   { "nome": { $regex: /Mc/i }},
   { _id: 0, "nome": 1 }
 )
+
+// DESAFIO 16
+db.produtos.count(
+  { ingredientes: { $size: 4 }}
+)
