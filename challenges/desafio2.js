@@ -7,7 +7,6 @@ db.produtos.updateMany(
     valorUnitario: NumberDecimal("0.00"),
   },
   },
-  { upsert: true },
 );
 
 db.produtos.find(

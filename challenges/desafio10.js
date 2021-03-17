@@ -10,10 +10,11 @@
 // Crie uma query que retorne o nome e vendasPorDia de todos os documentos.
 db.produtos.updateMany(
   { },
-  { $addToSet: {
+  { $set: {
     vendasPorDia: [0, 0, 0, 0, 0, 0, 0],
   },
   },
+  { upsert: true },
 );
 
 db.produtos.updateMany(

@@ -7,7 +7,7 @@
 
 db.produtos.updateMany(
   { },
-  { $addToSet: {
+  { $set: {
     avaliacao: NumberInt("0"),
   },
   },
