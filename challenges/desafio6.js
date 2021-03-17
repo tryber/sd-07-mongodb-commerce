@@ -1,5 +1,5 @@
 use("commerce");
-db.produtos.updateMany({ nome: { $nin: ["Big Mac", "Quarteirão com Queijo"] } },
+db.produtos.updateMany({ nome: { $in: ["Big Mac", "Quarteirão com Queijo"] } },
   { $push: { ingredientes: "bacon" } });
 
 use("commerce");
