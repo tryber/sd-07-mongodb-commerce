@@ -33,7 +33,6 @@ db.produtos.updateMany(
   },
 );
 
-
 db.produtos.find(
   {},
   {
