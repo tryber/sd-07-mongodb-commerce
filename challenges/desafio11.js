@@ -8,7 +8,7 @@ db.produtos.updateMany(
       },
     },
   },
-  { collation: { locale: 'pt' } }
+  { collation: { locale: "pt" } },
 );
 
 db.produtos.find(
