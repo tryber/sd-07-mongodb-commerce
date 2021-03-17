@@ -7,7 +7,7 @@ db.produtos.updateMany(
 );
 
 db.produtos.updateMany(
-  { tags: { $in: ["ave"] } },
+  { tags: { $elemMatch: "ave" } },
   { $inc: { avaliacao: 3 } },
 );
 
