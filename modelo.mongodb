@@ -34,3 +34,10 @@ use('commerce')
 db.produtos.find(
   { ingredientes: { $size: 4 } }
 ).count();
+
+use('commerce')
+db.produtos.createIndex({ ingredientes: "text" });
+
+
+use('commerce')
+db.produtos.find({ $text: { $search: "hamburguer frango" } }).count();
