@@ -4,11 +4,10 @@ db.produtos.updateMany(
     $push: {
       tags: {
         $each: ["combo", "tasty"],
-        $sort: { tags: 1 },
+        $sort: 1,
       },
     },
   },
-  { collation: { locale: "pt" } },
 );
 
 db.produtos.find(
