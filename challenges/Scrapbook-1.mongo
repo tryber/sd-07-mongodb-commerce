@@ -210,3 +210,8 @@ db.produtos.find(
   {},
   { _id: 0,  nome: 1, "tags": 1}
 )
+// DESAFIO 15
+db.produtos.count(
+  { "nome": { $regex: /Mc/i }},
+  { _id: 0, "nome": 1 }
+)
