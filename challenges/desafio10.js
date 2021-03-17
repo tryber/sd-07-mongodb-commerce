@@ -2,7 +2,7 @@ db.produtos.updateMany({}, {
   $push: { vendasPorDia: {
     $each: [0, 0, 0, 0, 0, 0, 0],
   } },
-}, { upsert: 1});
+}, { upsert: 1 });
 
 db.produtos.updateOne(
   { nome: "Big Mac" },
