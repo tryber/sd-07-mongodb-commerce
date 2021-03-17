@@ -4,7 +4,7 @@ db.produtos.updateMany(
     $rename: {
       descricao: "descricaoSite",
     },
-  }
+  },
 );
 
 db.produtos.find(
@@ -14,5 +14,5 @@ db.produtos.find(
     nome: 1,
     descricao: 1,
     descricaoSite: 1,
-  }
+  },
 );
