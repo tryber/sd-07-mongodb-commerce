@@ -2,12 +2,12 @@ db.produtos.updateMany({},
   { $set: { avaliacao: NumberInt("0") } });
 
 db.produtos.updateMany(
-  { tags: { $elemMatch: "bovino" } },
-  { $inc: { avaliacao: 2 } },
+  { tags: { $in: ["bovino"] } },
+  { $inc: { avaliacao: 5 } },
 );
 
 db.produtos.updateMany(
-  { tags: { $elemMatch: "ave" } },
+  { tags: { $in: ["ave"] } },
   { $inc: { avaliacao: 3 } },
 );
 
