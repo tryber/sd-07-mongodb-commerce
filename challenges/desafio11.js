@@ -1,3 +1,4 @@
+use("commerce");
 db.produtos.updateMany(
   {},
   { $push: {
@@ -6,8 +7,9 @@ db.produtos.updateMany(
         "combo",
         "tasty",
       ],
+      $sort: 1,
     },
-  },
+    },
   },
 );
 
