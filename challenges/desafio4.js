@@ -1,16 +1,15 @@
-db.produtos.updateMany(
-  { },
-  { $set: {
-    avaliação: NumberInt("0"),
+db.produtos.updateOne(
+  { nome: "Big Mac" },
+  { $currentDate: {
+    ultimaModificacao: { $type: "date" },
   },
   },
 );
 
 db.produtos.find(
-  { },
+  { ultimaModificacao: { $exists: true } },
   {
     nome: 1,
-    avaliação: 1,
     _id: 0,
   },
 );
