@@ -220,3 +220,12 @@ db.produtos.count(
 db.produtos.count(
   { ingredientes: { $size: 4 }}
 )
+
+// DESAFIO 17
+db.produtos.createIndex(
+  { "descricao": "text"},
+  { default_language: "portuguese" }
+)
+db.produtos.count({ $text: 
+  { $search: "frango hamburguer"}
+})
