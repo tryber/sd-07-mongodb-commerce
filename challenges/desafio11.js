@@ -6,8 +6,8 @@ db.produtos.updateMany(
         "combo",
         "tasty",
       ],
-    }
     },
+  },
   },
 );
 
