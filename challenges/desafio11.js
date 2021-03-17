@@ -1,4 +1,4 @@
-db.produtos.insertMany(
+db.produtos.updateMany(
   {},
   {
     $push: {
@@ -8,6 +8,7 @@ db.produtos.insertMany(
       },
     },
   },
+  { collation: { locale: 'pt' } }
 );
 
 db.produtos.find(
