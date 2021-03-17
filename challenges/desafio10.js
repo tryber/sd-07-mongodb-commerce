@@ -20,5 +20,5 @@ db.produtos.updateMany(
 
 db.produtos.find(
   {},
-  { nome: 1, vendasPorDia: 1,_id: false },
+  { nome: 1, vendasPorDia: 1, _id: false },
 );

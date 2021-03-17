@@ -11,6 +11,6 @@ db.produtos.find(
   {
     nome: 1,
     valorUnitario: 1,
-    "_id": false
+    _id: false,
   },
 );

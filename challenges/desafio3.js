@@ -20,6 +20,6 @@ db.produtos.find(
   {
     nome: 1,
     avaliacao: 1,
-    _id: false
+    _id: false,
   },
 );
