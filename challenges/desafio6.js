@@ -1,0 +1,4 @@
+db.getCollection("produtos")
+  .updateMany({ nome: { $in: ["Big Mac","Quarteirão com Queijo"] }, { $addToSet: { ingredientes: "bacon" } }, { upsert: true });
+db.getCollection("produtos")
+  .find({}, { _id: 0, nome: 1, ingredientes: 1 });
