@@ -7,4 +7,4 @@ db.getCollection("produtos")
     { upsert: true },
   );
 db.getCollection("produtos")
-  .find({}, {});
+  .find({}, { _id: 0, nome: 1, tags: 1 });
