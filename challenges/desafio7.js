@@ -1,2 +1,2 @@
-db.produtos.updateMany({}, { $pull: { ingredients: "cebola" } });
-db.produtos.find({ }, { nome: 1, ingredients: 1, _id: 0 });
+db.produtos.updateMany({}, { $pull: { ingredientes: "cebola" } });
+db.produtos.find({}, { nome: 1, ingredientes: 1, _id: 0 });
