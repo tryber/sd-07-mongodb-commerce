@@ -1,7 +1,7 @@
 db.getCollection("produtos")
   .updateMany(
     {},
-    { $rename: { nome: "descricaoSite" } },
+    { $rename: { descricao: "descricaoSite" } },
   );
 
 db.getCollection("produtos")
