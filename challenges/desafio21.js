@@ -1,5 +1,5 @@
 db.getCollection("produtos")
   .find(
-    { $expr: { $gte: ["$curtidas", "$vendidos"] } },
+    { $expr: { $gt: ["$curtidas", "$vendidos"] } },
     { nome: 1, _id: 0 },
   );
