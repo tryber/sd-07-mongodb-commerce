@@ -1,7 +1,9 @@
 db.produtos.updateMany({
-}, {
+},
+{
   $addToSet: {
-    tags: { $each: ["combo", "tasty"],
-      $sort: 1,
-    } },
+    tags: {
+      $each: ["combo", "tasty"],
+    },
+  },
 });
