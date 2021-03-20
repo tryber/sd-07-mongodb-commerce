@@ -3,8 +3,8 @@ db.produtos.insertMany({
 });
 
 db.produtos.updateMany(
-  { tags: "bovino", },
-  { $inc: { avaliacao: 5 }, },
+  { tags: "bovino" },
+  { $inc: { avaliacao: 5 } },
 );
 
 db.produtos.updateMany(
