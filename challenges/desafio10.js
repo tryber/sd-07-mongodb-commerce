@@ -1,5 +1,5 @@
 db.produtos.updateMany({}, {
-  $addToSet: {
+  $set: {
     vendasPorDia: [0, 0, 0, 0, 0, 0, 0],
   },
 });
