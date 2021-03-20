@@ -1,5 +1,5 @@
 db.produtos.updateMany(
-  {},  
+  {},
   { $unset: { ingredientes: "cebola" } },
 );
 
