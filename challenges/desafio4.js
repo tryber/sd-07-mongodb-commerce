@@ -2,7 +2,7 @@ db.produtos.updateMany(
   { nome: "Big Mac" },
   {
     $set: {
-      ultimaModificacao: new Date(),
+      ultimaModificacao: Date(),
     },
   },
 );
@@ -13,6 +13,5 @@ db.produtos.find({
   },
 }, {
   nome: 1,
-  ultimaModificacao: 1,
   _id: 0,
 });
