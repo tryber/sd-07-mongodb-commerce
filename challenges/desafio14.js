@@ -6,7 +6,7 @@ db.produtos.updateMany(
         $and: [
           {
             percentual: {
-              $gte: 20,
+              $gt: 20,
             },
           },
           {
