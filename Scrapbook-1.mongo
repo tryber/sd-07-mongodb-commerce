@@ -1,0 +1,2 @@
+db.gasprices.insert(
+{ "_id" : 1, "date" : ISODate(), "price" : NumberDecimal("2.099"), "station" : "Quikstop", "grade" : "regular" })
