@@ -16,8 +16,6 @@ db.produtos.updateOne(
   },
 );
 
-db.produtos.find({ nome: "Big Mac" });
-
 db.produtos.updateMany(
   { tags: { $all: ["bovino", "pão"] } },
   {
