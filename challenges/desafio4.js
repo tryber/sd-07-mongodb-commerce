@@ -1,5 +1,5 @@
 db.produtos.updateOne(
-  { nome: 'Big Mac' },
+  { nome: "Big Mac" },
   { $currentDate: { ultimaModificacao: true } },
 );
 
