@@ -1,4 +1,5 @@
-db.produtos.find({ $where() {
-  return this.curtidas > this.vendidos;
-},
-}, { _id: 0, nome: 1 });
+db.produtos.find(
+  {
+    $expr: { $gt: ["$curtidas", "$vendidos"] },
+  }, { _id: 0, nome: 1 },
+);
