@@ -1,6 +1,6 @@
 db.produtos.updateOne(
-  {},
-  { $pull: { ingredientes: "cebola" } },
+  { nome: "Cheddar McMelt" },
+  { $pop: { ingredientes: 1 } },
 );
 
 db.produtos.find(

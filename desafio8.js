@@ -1,6 +1,6 @@
 db.produtos.updateOne(
-  {},
-  { $pull: { ingredientes: "cebola" } },
+  { nome: "Quarteirão com Queijo" },
+  { $pop: { ingredientes: -1 } },
 );
 
 db.produtos.find(
