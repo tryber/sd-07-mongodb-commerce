@@ -1,6 +1,3 @@
-use('commerce');
-db.produtos.find();
-
 db.produtos.updateOne(
   { nome: "Big Mac" },
   { $currentDate: { ultimaModificacao: true } },
