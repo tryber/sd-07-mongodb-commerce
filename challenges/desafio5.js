@@ -1,5 +1,5 @@
 db.produtos.updateMany(
-  { nome: { $not: { $regex: /McChiken/ } } },
+  { nome: { $nin: ["McChicken"] } },
   { $addToSet: { ingredientes: "ketchup" } },
 );
 
