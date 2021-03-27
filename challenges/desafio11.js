@@ -1,4 +1,4 @@
-db.produtos.updateOne(
+db.produtos.updateMany(
   {},
   { $push: { tags: { $each: ["tasty", "combo"], $sort: 1 } } },
 );
