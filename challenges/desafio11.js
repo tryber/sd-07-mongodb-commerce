@@ -1,15 +1,14 @@
-db.produtos
-  .updateMany(
-    {},
-    {
-      $push: {
-        tags: ["combo", "tasty"],
+db.produtos.updateMany(
+  {},
+  {
+    $push: {
+      tags: {
+        $each: ["combo", "tasty"],
+        $sort: 1,
       },
     },
-  )
-  .sort({
-    tags: 1,
-  });
+  },
+);
 
 db.produtos.find(
   {},
