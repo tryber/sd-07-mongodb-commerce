@@ -1,16 +1,16 @@
 db.produtos.createIndex(
-    {
-      descricao: "text",
+  {
+    descricao: "text",
+  },
+  {
+    default_language: "portuguese",
+  },
+);
+
+db.produtos.countDocuments(
+  {
+    $text: {
+      $search: "feito com",
     },
-    {
-      default_language: "portuguese",
-    },
-  );
-  
-  db.produtos.countDocuments(
-    {
-      $text: {
-        $search: "feito com",
-      },
-    },
-  );
+  },
+);
