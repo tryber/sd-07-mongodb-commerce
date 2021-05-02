@@ -1,3 +1,5 @@
 db.produtos.find(
-  {},{_id:0, nome:1}
+  {
+    $expr: { $gt: ["$curtidas", "$vendidos"] },
+  }, { _id: 0, nome: 1 },
 ).pretty();
